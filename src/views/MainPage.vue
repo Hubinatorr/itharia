@@ -6,22 +6,48 @@
             </template>
             <template v-else>
                 <div class="relative inline-block w-full h-full">
-                    <img src="https://itharia.com/wp-content/uploads/2024/07/aq2.png"
-                         alt="Example Image" class="w-full h-full object-cover"/>
+                    <video
+                            class="w-full h-full object-cover"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                    >
+                        <source src="../../public/videos/map.mp4" />
+                    </video>
 
-                    <button @click="showFactions"
-                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-500 text-white px-4 py-2 rounded">
-                        Click Me
-                    </button>
+                    <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-5"
+                    >
+                        <img
+                                src="https://itharia.com/wp-content/uploads/2024/05/logo_glow.png"
+                                class="w-[350px] h-auto"
+                        />
+                        <div class="border-2 rounded-xl">
+                            <button
+                                    @click="showFactions"
+                                    class="transform uppercase transition-transform duration-200 hover:scale-110 bg-stone-900 font-semibold text-yellow-100 px-6 py-2 text-2xl border-1 border-yellow-100 shadow-white"
+                            >
+                                Join Battle
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </template>
         </Transition>
+    </div>
+    <div v-if="selectedFaction">
 
     </div>
+    <RegistrationModal
+        :faction="selectedFaction"
+        :color="selectedColor"
+    />
 </template>
 
 <script setup>
 import Factions from "../components/Factions.vue";
+import RegistrationModal from "../components/RegistrationModal.vue";
 import {onMounted, ref} from "vue";
 import {Modal} from "flowbite";
 let modalInstance = null; // To store the Flowbite Modal instance
@@ -55,7 +81,8 @@ onMounted(() => {
 });
 
 const openModal = (faction) => {
-    selectedFaction.value = faction
+    selectedFaction.value = faction.name
+    selectedColor.value = faction.color
     if (modalInstance) {
         modalInstance.show();
     }
@@ -73,6 +100,7 @@ const closeModal = () => {
 
 const factionsShown = ref(false);
 const selectedFaction = ref(null);
+const selectedColor = ref(null);
 </script>
 
 <style scoped>
