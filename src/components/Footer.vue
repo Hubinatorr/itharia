@@ -1,7 +1,6 @@
 <template>
     <footer class="dark:bg-stone-950 text-slate-100 py-8 px-4 text-center font-sans">
-
-        <div class="flex justify-center gap-6 mb-6">
+        <div class="flex justify-center gap-4 mb-6">
 
             <a v-for="social in socialLinks"
                :key="social.name"
