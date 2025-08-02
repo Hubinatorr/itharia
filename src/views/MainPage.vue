@@ -1,11 +1,11 @@
 <template>
-    <div class="min-h-[calc(100vh-68px)] bg-gray-100 dark:bg-gray-800">
+    <div class="min-h-[calc(100vh-68px)] bg-gray-100 dark:bg-gray-800 ">
         <Transition name="fade" mode="out-in">
             <template v-if="factionsShown">
                 <Factions :show-modal="openModal"/>
             </template>
             <template v-else>
-                <div class="relative inline-block w-full h-full">
+                <div class="relative w-full h-full">
                     <video
                             class="w-full h-full object-cover"
                             autoplay
@@ -33,6 +33,7 @@
                         </div>
                     </div>
                 </div>
+
             </template>
         </Transition>
     </div>
@@ -50,6 +51,7 @@ import Factions from "../components/Factions.vue";
 import RegistrationModal from "../components/RegistrationModal.vue";
 import {onMounted, ref} from "vue";
 import {Modal} from "flowbite";
+import Footer from "../components/Footer.vue";
 let modalInstance = null; // To store the Flowbite Modal instance
 
 
@@ -106,16 +108,5 @@ const selectedColor = ref(null);
 <style scoped>
 .min-h-\[calc\(100vh-68px\)\] {
     height: calc(100vh - 68px);
-}
-
-/* Transition Styles */
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
 }
 </style>

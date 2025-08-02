@@ -47,7 +47,7 @@
                         <div v-show="isBooksDropdownOpen"
                              class="absolute z-10 font-normal bg-white divide-y divide-stone-100 rounded-lg shadow w-52 dark:bg-stone-900 dark:divide-stone-600">
                             <ul class="py-2 text-sm text-stone-700 dark:text-stone-400">
-                                <li><a href="#"
+                                <li><a href="/sample-chapters"
                                        class="block px-4 py-2 dark:hover:text-yellow-200 text-xl">Sample
                                     Chapters</a></li>
                             </ul>
@@ -70,13 +70,13 @@
                         <div v-show="isGamesDropdownOpen"
                              class="absolute z-10 font-normal bg-white divide-y divide-stone-100 rounded-lg shadow w-44 dark:bg-stone-900 dark:divide-stone-600">
                             <ul class="py-2 text-sm text-stone-700 dark:text-stone-400">
-                                <li><a href="#"
+                                <li><a href="/war-of-itharia"
                                        class="block px-4 py-2 dark:hover:text-yellow-200 text-xl">War
                                     of Itharia</a></li>
-                                <li><a href="#"
+                                <li><a href="/quests-of-itharia"
                                        class="block px-4 py-2 dark:hover:text-yellow-200 text-xl">Quest
                                     of Itharia</a></li>
-                                <li><a href="#"
+                                <li><a href="/cards-of-itharia"
                                        class="block px-4 py-2 dark:hover:text-yellow-200 text-xl">Cards
                                     of Itharia</a></li>
                             </ul>
@@ -84,7 +84,7 @@
                     </li>
 
                     <li>
-                        <a href="#"
+                        <a href="/almanach"
                            class="block text-xl py-2 px-3 text-stone-900 rounded hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-yellow-200 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
                             Almanach
                         </a>
