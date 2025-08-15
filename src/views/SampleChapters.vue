@@ -409,7 +409,7 @@ const text = 'Snow fell, burying the dead and dammed alike. \n' +
             </p>
             <img
                     fetchpriority="high"
-                    src="https://itharia.com/wp-content/uploads/2024/12/dwarven-watchtower.jpeg"
+                    src="../../public/images/dwarven-watchtower.jpeg"
                     class="w-[300px] block mx-auto"
             />
             <div class="text-left space-y-2">

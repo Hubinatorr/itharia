@@ -20,7 +20,7 @@
                             class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-5"
                     >
                         <img
-                                src="https://itharia.com/wp-content/uploads/2024/05/logo_glow.png"
+                                src="../../public/images/logo_glow.png"
                                 class="w-[350px] h-auto"
                         />
                         <div class="border-2 rounded-xl">
