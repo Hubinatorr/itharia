@@ -15,7 +15,7 @@
                     :node="node"
                     :level="0"
                     :active-page-id="activePageId"
-                    @select-page="onPageSelect"
+                    @click="onPageSelect"
             />
         </nav>
     </div>
@@ -36,7 +36,6 @@ const route = useRoute();
 const activePageId = computed(() => route.params.pageId);
 
 function onPageSelect() {
-    // Po kliknutí na link zatvoríme menu
     emit('close');
 }
 </script>

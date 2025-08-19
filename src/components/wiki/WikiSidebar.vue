@@ -1,5 +1,5 @@
 <template>
-    <aside class="w-72 flex-shrink-0 p-5 border-r border-stone-700 overflow-y-auto">
+    <aside class="flex-shrink-0 p-5 border-r border-stone-700 overflow-y-auto">
         <div class="filter-container mb-5">
             <input
                     type="text"

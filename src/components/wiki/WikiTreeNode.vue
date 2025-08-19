@@ -3,6 +3,7 @@
         <router-link
                 v-if="node.type === 'page'"
                 :to="`/wiki/${node.id}`"
+                @click="handlePageClick"
                 class="node-item flex items-center p-2 rounded cursor-pointer mb-0.5"
                 :class="{
         'hover:bg-zinc-700': node.id !== activePageId,
@@ -25,6 +26,7 @@
 
         <div v-if="isExpanded && node.children">
             <WikiTreeNode
+                    class="pl-2"
                     v-for="child in node.children"
                     :key="child.id"
                     :node="child"
@@ -37,6 +39,12 @@
 
 <script setup>
 import {ref} from 'vue';
+
+const emit = defineEmits(['select-page']);
+
+function handlePageClick() {
+    emit('select-page');
+}
 
 defineProps({
     node: Object,
