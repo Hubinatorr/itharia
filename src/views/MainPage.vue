@@ -24,7 +24,7 @@
                                     src="/images/logo_glow.png"
                                     class="w-[350px] h-auto"
                             />
-                            <div class="border-2 rounded-xl">
+                            <div class="rounded-xl">
                                 <button
                                         @click="showFactions"
                                         class="transform uppercase transition-transform duration-200 hover:scale-110 bg-stone-900 font-semibold text-yellow-100 px-6 py-2 text-2xl border-1 border-yellow-100 shadow-white"

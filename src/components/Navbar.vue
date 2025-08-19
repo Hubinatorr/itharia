@@ -46,7 +46,7 @@
                         </button>
                         <div v-show="isBooksDropdownOpen"
                              class="absolute z-10 font-normal  divide-y divide-stone-100 rounded-lg shadow w-52 bg-stone-900 divide-stone-600">
-                            <ul class="py-2 text-sm text-stone-700 text-stone-400">
+                            <ul class="py-2 text-sm text-stone-400">
                                 <li><a href="/sample-chapters"
                                        class="block px-4 py-2 hover:text-yellow-200 text-xl">Sample
                                     Chapters</a></li>
@@ -69,7 +69,7 @@
                         </button>
                         <div v-show="isGamesDropdownOpen"
                              class="absolute z-10 font-normal  divide-y divide-stone-100 rounded-lg shadow w-44 bg-stone-900 divide-stone-600">
-                            <ul class="py-2 text-sm text-stone-700 text-stone-400">
+                            <ul class="py-2 text-sm text-stone-400">
                                 <li><a href="/war-of-itharia"
                                        class="block px-4 py-2 hover:text-yellow-200 text-xl">War
                                     of Itharia</a></li>
