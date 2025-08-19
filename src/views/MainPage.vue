@@ -1,53 +1,55 @@
 <template>
-    <div class="min-h-[calc(100vh-68px)] bg-gray-100 dark:bg-gray-800">
-        <Transition name="fade" mode="out-in">
-            <template v-if="factionsShown">
-                <Factions :show-modal="openModal"/>
-            </template>
-            <template v-else>
-                <div class="relative w-full h-full">
-                    <video
-                            class="w-full h-full object-cover"
-                            autoplay
-                            muted
-                            loop
-                            playsinline
-                    >
-                        <source src="../../public/videos/map.mp4" />
-                    </video>
+    <div class="space-y-6">
+        <div class="min-h-[calc(100vh-68px)]">
+            <Transition name="fade" mode="out-in">
+                <template v-if="factionsShown">
+                    <Factions :show-modal="openModal"/>
+                </template>
+                <template v-else>
+                    <div class="relative w-full h-full">
+                        <video
+                                class="w-full h-full object-cover"
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                        >
+                            <source src="../../public/videos/map.mp4" />
+                        </video>
 
-                    <div
-                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-5"
-                    >
-                        <img
-                                src="../../public/images/logo_glow.png"
-                                class="w-[350px] h-auto"
-                        />
-                        <div class="border-2 rounded-xl">
-                            <button
-                                    @click="showFactions"
-                                    class="transform uppercase transition-transform duration-200 hover:scale-110 bg-stone-900 font-semibold text-yellow-100 px-6 py-2 text-2xl border-1 border-yellow-100 shadow-white"
-                            >
-                                Join Battle
-                            </button>
+                        <div
+                                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-5"
+                        >
+                            <img
+                                    src="../../public/images/logo_glow.png"
+                                    class="w-[350px] h-auto"
+                            />
+                            <div class="border-2 rounded-xl">
+                                <button
+                                        @click="showFactions"
+                                        class="transform uppercase transition-transform duration-200 hover:scale-110 bg-stone-900 font-semibold text-yellow-100 px-6 py-2 text-2xl border-1 border-yellow-100 shadow-white"
+                                >
+                                    Join Battle
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-            </template>
-        </Transition>
-    </div>
-    <div class="px-4">
-        <div class="grid text-yellow-100 grid-cols-1 md:grid-cols-2 w-full justify-center py-32">
-            <div>a</div>
-            <div>
-                <h2 class="text-3xl font-bold text-yellow-200 ">Welcome to Itharia
-                </h2>
+                </template>
+            </Transition>
+        </div>
+        <div class="grid space-y-6 md:space-y-0 text-yellow-100 grid-cols-1 md:grid-cols-2 w-full justify-center items-stretch">
+            <div class="flex">
+                <img src="../../public/images/pa.png"
+                     class="w-full h-full object-cover md:p-12 mask-fade-corners">
+            </div>
+            <div class="p-12 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold text-yellow-200">Welcome to Itharia</h2>
                 <p class="whitespace-pre-line py-4">
-                   {{welcomeText}}
+                    {{welcomeText}}
                 </p>
             </div>
         </div>
+        <settlements/>
     </div>
     <RegistrationModal
         :faction="selectedFaction"
@@ -60,7 +62,7 @@ import Factions from "../components/Factions.vue";
 import RegistrationModal from "../components/RegistrationModal.vue";
 import {onMounted, ref} from "vue";
 import {Modal} from "flowbite";
-import Footer from "../components/Footer.vue";
+import Settlements from "../components/Settlements.vue";
 let modalInstance = null; // To store the Flowbite Modal instance
 
 const welcomeText = 'A classical insired Epic fantasy reborn for a new age.\n' +
@@ -120,9 +122,10 @@ const closeModal = () => {
 const factionsShown = ref(false);
 const selectedFaction = ref(null);
 const selectedColor = ref(null);
+
 </script>
 
-<style scoped>
+<style>
 .min-h-\[calc\(100vh-68px\)\] {
     height: calc(100vh - 68px);
 }

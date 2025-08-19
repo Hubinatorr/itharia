@@ -3,7 +3,7 @@ header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 
-$host = "md409.wedos.net"; // Often 'localhost' if PHP and MySQL are on same hosting
+$host = "localhost"; // Often 'localhost' if PHP and MySQL are on same hosting
 $user = "a344678_itharia";
 $pass = "RootDb123.";
 $db   = "d344678_itharia";
