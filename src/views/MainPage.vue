@@ -49,7 +49,7 @@
                 </p>
             </div>
         </div>
-        <settlements class="px-4"/>
+        <settlements/>
     </div>
     <RegistrationModal
         :faction="selectedFaction"
