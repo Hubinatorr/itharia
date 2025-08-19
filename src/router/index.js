@@ -5,6 +5,7 @@ import QuestsOfItharia from "../views/QuestsOfItharia.vue";
 import WarOfItharia from "../views/WarOfItharia.vue";
 import CardsOfItharia from "../views/CardsOfItharia.vue";
 import Almanach from "../views/Almanach.vue";
+import WikiLayout from "../components/wiki/WikiLayout.vue";
 
 const routes = [
 	{
@@ -37,6 +38,11 @@ const routes = [
 		name: "Almanach",
 		component: Almanach
 	},
+	{
+		path: '/wiki/:pageId',
+		name: 'WikiPage',
+		component: WikiLayout
+	}
 ];
 
 const router = createRouter({

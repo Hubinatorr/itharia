@@ -1,5 +1,5 @@
 <template>
-    <aside class="w-72 flex-shrink-0 bg-zinc-800 p-5 border-r border-zinc-700 overflow-y-auto">
+    <aside class="w-72 flex-shrink-0 bg-stone-900 p-5 border-r border-stone-700 overflow-y-auto">
         <div class="filter-container mb-5">
             <input
                     type="text"
@@ -15,27 +15,27 @@
                     :node="node"
                     :level="0"
                     :active-page-id="activePageId"
-                    @select-page="(id) => $emit('select-page', id)"
             />
         </nav>
     </aside>
 </template>
 
 <script setup>
-// Script setup zostáva nezmenený
-import { ref, computed } from 'vue';
-import { wikiTree } from '../wikiData.js';
+import {ref, computed} from 'vue';
+import {useRoute} from 'vue-router';
+import {wikiTree} from './wikiData.js';
 import WikiTreeNode from './WikiTreeNode.vue';
 
-defineProps(['activePageId']);
-defineEmits(['select-page']);
+const route = useRoute();
+
+const activePageId = computed(() => route.params.pageId);
 
 const searchTerm = ref('');
-
 const filteredTree = computed(() => {
     if (!searchTerm.value) {
         return wikiTree;
     }
+
     function filterNodes(nodes) {
         const result = [];
         for (const node of nodes) {
@@ -44,12 +44,13 @@ const filteredTree = computed(() => {
             } else if (node.type === 'folder') {
                 const children = filterNodes(node.children);
                 if (children.length > 0) {
-                    result.push({ ...node, children });
+                    result.push({...node, children});
                 }
             }
         }
         return result;
     }
+
     return filterNodes(wikiTree);
 });
 </script>

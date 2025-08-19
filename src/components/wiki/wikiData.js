@@ -1,14 +1,12 @@
-// Štruktúra pre navigačný strom vľavo.
-// Použijeme rekurzívnu štruktúru, kde každý objekt môže mať 'children'.
 export const wikiTree = [
 	{
 		id: 'geographical-overview',
 		type: 'folder',
 		name: 'Geographical Overview',
 		children: [
-			{ id: 'begrun-skurdir', type: 'page', name: 'Begrün Skurðir' },
-			{ id: 'aquilonia', type: 'page', name: 'Aquilonia' },
-			{ id: 'pansalam', type: 'page', name: 'Pansala\'m' },
+			{id: 'begrun-skurdir', type: 'page', name: 'Begrün Skurðir'},
+			{id: 'aquilonia', type: 'page', name: 'Aquilonia'},
+			{id: 'pansalam', type: 'page', name: 'Pansala\'m'},
 		],
 	},
 	{
@@ -16,13 +14,11 @@ export const wikiTree = [
 		type: 'folder',
 		name: 'Historical Events',
 		children: [
-			{ id: 'first-era', type: 'page', name: 'The First Era' },
+			{id: 'first-era', type: 'page', name: 'The First Era'},
 		],
 	},
 ];
 
-// Obsah jednotlivých stránok. Kľúč je 'id' stránky.
-// V praxi by toto prichádzalo z API alebo Markdown súborov.
 export const wikiPages = {
 	'pansalam': {
 		title: 'Pansala\'m',
