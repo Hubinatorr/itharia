@@ -1,5 +1,5 @@
 <template>
-    <div class="space-y-6">
+    <div class="space-y-16">
         <div class="min-h-[calc(100vh-68px)]">
             <Transition name="fade" mode="out-in">
                 <template v-if="factionsShown">

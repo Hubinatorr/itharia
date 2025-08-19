@@ -9,7 +9,7 @@
         'bg-yellow-500 text-zinc-900 font-bold': node.id === activePageId
       }"
         >
-            <span class="ml-2">📄</span>
+            <span class="mr-2">📄</span>
             {{ node.name }}
         </router-link>
 

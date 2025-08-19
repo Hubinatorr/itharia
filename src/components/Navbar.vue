@@ -24,7 +24,7 @@
                 <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-stone-100 rounded-lg bg-stone-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-stone-800 md:dark:bg-stone-950 dark:border-stone-700">
 
                     <li>
-                        <a href="#"
+                        <a href="/"
                            class="text-xl block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-yellow-200"
                            aria-current="page">
                             Home

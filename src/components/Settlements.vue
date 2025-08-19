@@ -5,19 +5,19 @@ const settlements = [
         name: "Bergrün Skürdür",
         description: "Welcome to Bergrün Skürdur, the resilient and industrious home of the Ironpeak Dwarfs. Nestled in the northeast part of Celestria, this dwarven kingdom is a testament to the mastery of the iron element.",
         image: "../../public/images/bergrun.png",
-        link: "#"
+        link: "/wiki/begrun-skurdir"
     },
     {
         name: "Aquilonia",
         description: "Welcome to Aquilonia, a thriving city-state renowned for its mastery of watermanipulation. Situated at the heart of the northern coast of Celestria island, Aquiloniais home to a vibrant and innovative society.",
         image: "../../public/images/aquilonia.png",
-        link: "#"
+        link: "/wiki/aquilonia"
     },
     {
         name: "Pansala'm",
         description: "Welcome to Pansala’m, the serene and harmonious home of the Windfolks, comprised of Avians and Minotaurs. Nestled southwest from the center of Celestria, near the majestic Arborn Nuclea and the expansive Celestial Lake.",
         image: "../../public/images/pa.png",
-        link: "#"
+        link: "/wiki/pansalam"
     }
 ]
 

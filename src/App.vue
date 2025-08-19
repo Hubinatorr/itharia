@@ -7,9 +7,8 @@ import Footer from "./components/Footer.vue";
 <template>
     <div class="bg-stone-950 ">
         <router-link to="/"/>
-        <router-link to="/"/>
         <Navbar/>
-        <div class="min-h-[calc(100vh-224px)] space-y-2 bg-stone-950 flex flex-col items-center justify-center text-center font-bold text-yellow-200">
+        <div class="min-h-[calc(100vh-224px)] bg-stone-950 flex flex-col items-center justify-center text-yellow-100">
             <router-view/>
         </div>
         <Footer/>
