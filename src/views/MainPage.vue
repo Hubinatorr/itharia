@@ -37,19 +37,19 @@
                 </template>
             </Transition>
         </div>
-        <div class="grid space-y-6 md:space-y-0 text-yellow-100 grid-cols-1 md:grid-cols-2 w-full justify-center items-stretch">
+        <div class="px-4 grid space-y-6 md:space-y-0 text-yellow-100 grid-cols-1 md:grid-cols-2 w-full justify-center items-stretch">
             <div class="flex">
                 <img src="/images/pa.png"
                      class="w-full h-full object-cover md:p-12 mask-fade-corners">
             </div>
-            <div class="p-12 flex flex-col justify-center">
+            <div class="lg:px-12 flex flex-col justify-center">
                 <h2 class="text-3xl font-bold text-yellow-200">Welcome to Itharia</h2>
                 <p class="whitespace-pre-line py-4">
                     {{welcomeText}}
                 </p>
             </div>
         </div>
-        <settlements/>
+        <settlements class="px-4"/>
     </div>
     <RegistrationModal
         :faction="selectedFaction"
