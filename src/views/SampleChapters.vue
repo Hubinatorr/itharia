@@ -409,7 +409,7 @@ const text = 'Snow fell, burying the dead and dammed alike. \n' +
             </p>
             <img
                     fetchpriority="high"
-                    src="../../public/images/dwarven-watchtower.jpeg"
+                    src="/images/dwarven-watchtower.jpeg"
                     class="w-[300px] block mx-auto"
             />
             <div class="text-left space-y-2">

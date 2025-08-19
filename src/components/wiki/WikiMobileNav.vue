@@ -4,7 +4,7 @@
             class="fixed inset-0 bg-zinc-900 z-40 flex flex-col md:hidden"
     >
         <div class="flex justify-between items-center p-4 border-b border-zinc-700 flex-shrink-0">
-            <span class="font-bold text-lg">Navigácia</span>
+            <span class="font-bold text-lg">Navigation</span>
             <button @click="$emit('close')" class="text-2xl">&times;</button>
         </div>
 

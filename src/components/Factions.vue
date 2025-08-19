@@ -27,27 +27,27 @@ const props = defineProps({
 const factions = ref([
     {
         name: 'Dwarfs',
-        imageUrl: '../public/images/dwarfs-army.png',
+        imageUrl: '/images/dwarfs-army.png',
         color: 'gray-900' // closest to darkstone
     },
     {
         name: 'Humans',
-        imageUrl: '../public/images/humans.png',
+        imageUrl: '/images/humans.png',
         color: 'blue-950'
     },
     {
         name: 'Avians',
-        imageUrl: '../public/images/aviani.png',
+        imageUrl: '/images/aviani.png',
         color: 'yellow-100' // light/gold-like
     },
     {
         name: 'Minotaurs',
-        imageUrl: '../public/images/minotaur.png',
+        imageUrl: '/images/minotaur.png',
         color: 'yellow-100' // light/gold-like
     },
     {
         name: 'Reptilians',
-        imageUrl: '../public/images/reptisovia.png',
+        imageUrl: '/images/reptisovia.png',
         color: 'red-800'
     }
 ])

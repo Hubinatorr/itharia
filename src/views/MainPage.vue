@@ -14,14 +14,14 @@
                                 loop
                                 playsinline
                         >
-                            <source src="../../public/videos/map.mp4" />
+                            <source src="/videos/map.mp4" />
                         </video>
 
                         <div
                                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-5"
                         >
                             <img
-                                    src="../../public/images/logo_glow.png"
+                                    src="/images/logo_glow.png"
                                     class="w-[350px] h-auto"
                             />
                             <div class="border-2 rounded-xl">
@@ -39,7 +39,7 @@
         </div>
         <div class="grid space-y-6 md:space-y-0 text-yellow-100 grid-cols-1 md:grid-cols-2 w-full justify-center items-stretch">
             <div class="flex">
-                <img src="../../public/images/pa.png"
+                <img src="/images/pa.png"
                      class="w-full h-full object-cover md:p-12 mask-fade-corners">
             </div>
             <div class="p-12 flex flex-col justify-center">

@@ -1,8 +1,8 @@
 <template>
-    <nav class="bg-white border-stone-200  dark:bg-stone-950 shadow-sm">
+    <nav class="bg-white border-stone-200 bg-stone-950 shadow-sm">
         <div class="flex flex-wrap justify-between mx-auto p-2">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://itharia.com/wp-content/uploads/2024/05/logo_EDE2C5.png" class="w-14 h-auto"
+                <img src="/favicon.png" class="w-14 h-auto"
                      alt="Flowbite Logo"/>
                 <span class="self-center text-3xl text-yellow-100 font-semibold whitespace-nowrap">Itharia</span>
             </a>
