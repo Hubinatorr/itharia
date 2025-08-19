@@ -1,5 +1,5 @@
 <template>
-    <div class="flex h-screen bg-zinc-900 w-full">
+    <div class="flex h-screen w-full">
         <WikiSidebar class="hidden md:flex flex-col" />
 
         <div class="flex-1 flex flex-col min-w-0 h-screen">

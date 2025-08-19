@@ -1,5 +1,5 @@
 <template>
-    <main class="flex-grow md:p-8 sm:px overflow-y-auto">
+    <main class="flex-grow md:px-8 overflow-y-auto">
         <div v-if="page">
             <div class="content-body p-4">
                 <div class="flex md:flex-row sm:flex-col">
@@ -12,21 +12,18 @@
                             <button
                                     @click="changeFontSize(-0.1)"
                                     class="px-3 py-1 border border-zinc-600 rounded hover:bg-zinc-700 transition-colors"
-                                    title="Zmenšiť text"
                             >
                                 A-
                             </button>
                             <button
                                     @click="resetFontSize"
                                     class="px-3 py-1 border border-zinc-600 rounded hover:bg-zinc-700 transition-colors"
-                                    title="Obnoviť veľkosť"
                             >
                                 A
                             </button>
                             <button
                                     @click="changeFontSize(0.1)"
                                     class="px-3 py-1 border border-zinc-600 rounded hover:bg-zinc-700 transition-colors"
-                                    title="Zväčšiť text"
                             >
                                 A+
                             </button>
