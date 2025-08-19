@@ -50,7 +50,7 @@
 <script setup>
 import {computed, ref, watch} from 'vue';
 import {useRoute} from 'vue-router';
-import {wikiPages} from './wikiData.js';
+import {wikiPages} from '../../data/wikiData.js';
 
 const route = useRoute();
 

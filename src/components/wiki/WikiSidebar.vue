@@ -23,7 +23,7 @@
 <script setup>
 import {ref, computed} from 'vue';
 import {useRoute} from 'vue-router';
-import {wikiTree} from './wikiData.js';
+import {wikiTree} from '../../data/wikiData.js';
 import WikiTreeNode from './WikiTreeNode.vue';
 
 const route = useRoute();

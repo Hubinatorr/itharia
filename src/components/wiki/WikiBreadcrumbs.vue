@@ -23,7 +23,7 @@
 <script setup>
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import { wikiTree } from './wikiData';
+import { wikiTree } from '../../data/wikiData.js';
 import { findPathById } from '../../utils/wikiUtils';
 
 const route = useRoute();
