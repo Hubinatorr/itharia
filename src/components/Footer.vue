@@ -1,5 +1,5 @@
 <template>
-    <footer class="dark:bg-stone-950 text-slate-100 py-8 px-4 text-center font-sans">
+    <footer class="bg-stone-950 text-slate-100 py-8 px-4 text-center font-sans">
         <div class="flex justify-center gap-4 mb-6">
 
             <a v-for="social in socialLinks"
@@ -9,7 +9,7 @@
                rel="noopener noreferrer"
                :aria-label="`Visit our ${social.name} page`"
                class="text-base font-medium transition-colors duration-300 hover:text-yellow-200 transform hover:-translate-y-0.5">
-                <div class="w-12 hover:fill-yellow-200 dark:fill-white" v-html="social.icon"></div>
+                <div class="w-12 hover:fill-yellow-200 fill-white" v-html="social.icon"></div>
             </a>
         </div>
 

@@ -11,9 +11,8 @@
                 </router-link>
 
                 <span v-else class="truncate" :class="{ 'text-zinc-200 font-medium': index === path.length - 1 }">
-            {{ item.name }}
-        </span>
-
+                    {{ item.name }}
+                </span>
                 <span v-if="index < path.length - 1" class="mx-2">/</span>
             </li>
         </ol>
