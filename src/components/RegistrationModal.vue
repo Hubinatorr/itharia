@@ -1,8 +1,22 @@
 <script setup>
-defineProps({
+import {ref} from "vue";
+import {addUser} from "../utils/api.js";
+
+const props = defineProps({
     faction: String,
     color: String,
 })
+
+const email = ref(null)
+
+function createUser() {
+    addUser(email.value, props.faction.toLowerCase()).then((response) => {
+        console.log(response)
+    }).catch((err) => {
+        console.log(err)
+    })
+}
+
 </script>
 
 <template>
@@ -28,6 +42,7 @@ defineProps({
                         Give us your email please
                     </p>
                     <input
+                            v-model="email"
                             type="text"
                             id="first_name"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Your Email" required
@@ -35,7 +50,9 @@ defineProps({
                 </div>
                 <!-- Modal footer -->
                 <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b border-gray-600">
-                    <button data-modal-hide="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">I accept</button>
+                    <button :disabled="email === null"
+                            @click="createUser"
+                            data-modal-hide="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">I accept</button>
                 </div>
             </div>
         </div>
