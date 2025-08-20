@@ -1,14 +1,19 @@
 <template>
     <div class="space-y-16">
         <div class="min-h-[calc(100vh-68px)]">
-            <Transition name="fade" mode="out-in">
-                <template v-if="factionsShown">
-                    <Factions :show-modal="openModal"/>
-                </template>
-                <template v-else>
-                    <WelcomeScreen @showFactions="showFactions"/>
-                </template>
-            </Transition>
+            <template v-if="useUserStore().faction">
+                <UserFaction/>
+            </template>
+            <template v-else>
+                <Transition name="fade" mode="out-in">
+                    <template v-if="factionsShown">
+                        <Factions :show-modal="openModal"/>
+                    </template>
+                    <template v-else>
+                        <WelcomeScreen @showFactions="showFactions"/>
+                    </template>
+                </Transition>
+            </template>
         </div>
         <div class="px-4 grid space-y-6 md:space-y-0 text-yellow-100 grid-cols-1 md:grid-cols-2 w-full justify-center items-stretch">
             <div class="flex">
@@ -37,6 +42,8 @@ import {onMounted, ref} from "vue";
 import {Modal} from "flowbite";
 import Settlements from "../components/Settlements.vue";
 import WelcomeScreen from "../components/WelcomeScreen.vue";
+import {useUserStore} from "../stores/userStore.js";
+import UserFaction from "../components/UserFaction.vue";
 let modalInstance = null; // To store the Flowbite Modal instance
 
 const welcomeText = 'A classical insired Epic fantasy reborn for a new age.\n' +

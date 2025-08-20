@@ -1,17 +1,17 @@
-import {defineStore} from "pinia";
+import { defineStore } from "pinia";
 
-export const userStore = defineStore('todo', {
+export const useUserStore = defineStore('user', {
 	state: () => ({
 		user: {
 			role: 'user',
-			faction: undefined,
-			email: undefined,
+			faction: null,
+			email: null,
 		}
-
 	}),
 	getters: {
-		role: (state) => state.role,
-		faction: (state) => state.faction,
+		role: (state) => state.user.role,
+		faction: (state) => state.user.faction,
+		email: (state) => state.user.email,
 	},
 	actions: {
 		setUser(user) {

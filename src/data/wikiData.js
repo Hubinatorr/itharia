@@ -1,3 +1,5 @@
+import {ref} from "vue";
+
 export const wikiTree = [
 	{
 		id: 'geographical-overview',
@@ -60,3 +62,32 @@ export const wikiPages = {
 		content: `<p>Content about the First Era goes here...</p>`
 	}
 };
+
+
+export const factions = ref([
+	{
+		name: 'Dwarfs',
+		imageUrl: '/images/factions/dwarfs.png',
+		color: 'gray-900' // closest to darkstone
+	},
+	{
+		name: 'Humans',
+		imageUrl: '/images/factions/humans.png',
+		color: 'blue-950'
+	},
+	{
+		name: 'Avians',
+		imageUrl: '/images/factions/avians.png',
+		color: 'yellow-100' // light/gold-like
+	},
+	{
+		name: 'Minotaurs',
+		imageUrl: '/images/factions/minotaurs.png',
+		color: 'yellow-100' // light/gold-like
+	},
+	{
+		name: 'Reptilians',
+		imageUrl: '/images/factions/reptilians.png',
+		color: 'red-800'
+	}
+])

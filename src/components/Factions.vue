@@ -20,35 +20,8 @@
 </template>
 
 <script setup>
-import {ref} from "vue";
 const props = defineProps({
     showModal: Function
 })
-const factions = ref([
-    {
-        name: 'Dwarfs',
-        imageUrl: '/images/dwarfs-army.png',
-        color: 'gray-900' // closest to darkstone
-    },
-    {
-        name: 'Humans',
-        imageUrl: '/images/humans.png',
-        color: 'blue-950'
-    },
-    {
-        name: 'Avians',
-        imageUrl: '/images/aviani.png',
-        color: 'yellow-100' // light/gold-like
-    },
-    {
-        name: 'Minotaurs',
-        imageUrl: '/images/minotaur.png',
-        color: 'yellow-100' // light/gold-like
-    },
-    {
-        name: 'Reptilians',
-        imageUrl: '/images/reptisovia.png',
-        color: 'red-800'
-    }
-])
+import {factions} from "../data/wikiData.js";
 </script>

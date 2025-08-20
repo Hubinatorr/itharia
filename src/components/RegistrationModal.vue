@@ -1,7 +1,7 @@
 <script setup>
 import {ref} from "vue";
 import {addUser} from "../utils/api.js";
-import {userStore} from "../stores/userStore.js";
+import {useUserStore} from "../stores/userStore.js";
 
 const props = defineProps({
     faction: String,
@@ -10,10 +10,12 @@ const props = defineProps({
 
 const email = ref(null)
 
+const user = useUserStore()
+
 function createUser() {
     addUser(email.value, props.faction.toLowerCase()).then((response) => {
-        userStore.setEmail(email.value)
-        userStore.setFaction(props.faction)
+        user.setEmail(email.value)
+        user.setFaction(props.faction)
     }).catch((err) => {
         console.log(err)
     })
