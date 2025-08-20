@@ -1,14 +1,8 @@
 {
-  "name": "tailwind-vue-starter",
+  "name": "itharia",
   "version": "1.0.0",
-  "description": "A free and open-source starter project to help you get started with the core Flowbite Library components and Vue 3",
+  "description": "Itharia frontend",
   "license": "MIT",
-  "repository": "https://github.com/themesberg/tailwind-vue-starter",
-  "homepage": "https://flowbite.com/docs/getting-started/vue/",
-  "contributors": [
-    "Zoltán Szőgyényi (https://twitter.com/zoltanszogyenyi)"
-  ],
-  "author": "Bergside Inc.",
   "type": "module",
   "scripts": {
     "dev": "vite",

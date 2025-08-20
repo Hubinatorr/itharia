@@ -51,7 +51,7 @@ export const wikiPages = {
 <p>The dwarven capital, Bergrün Skürdur, is a marvel of engineering and architecture. Carved into the mountainside, it combines the natural strength of the earth with the Dwarfs’ unparalleled craftsmanship. The city’s halls and corridors are adorned withintricate runes and reliefs depicting their rich history and legendary ancestors. Massive forges blaze day and night, where master blacksmiths and artisans shapeiron and obsidium into powerful tools, weapons, and artifacts.&nbsp;</p>
 <p>The Dwarfs’ connection to their ancestors is profound, with numerous festivals and ceremonies dedicated to honoring those who came before. Ancestral shrines, scattered throughout the city and mines, serve as places of reflection and guidance. The most significant of these is the Forgefire Festival, a grand celebration whereDwarfs from all corners of the kingdom gather to pay homage to the ancient spirits, share stories of old, and renew their bonds with the land and each other.&nbsp;</p>
 <p>Bergrün Skürdur is a kingdom where tradition and progress walk hand in hand. The Ironpeak Dwarfs, with their unwavering spirit, dedication to their craft, and deep respect for their ancestors, embody the enduring strength of the iron element. Their way of life, steeped in tradition yet open to new discoveries, is a testament to their resilience and ingenuity.</p>
-<p></p>`
+`
 	},
 	'first-era': {
 		title: 'The First Era',
