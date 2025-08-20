@@ -18,7 +18,6 @@
                 © 2024 Itharia | All rights reserved.
             </p>
         </div>
-
     </footer>
 </template>
 

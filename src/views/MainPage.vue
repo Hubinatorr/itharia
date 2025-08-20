@@ -6,34 +6,7 @@
                     <Factions :show-modal="openModal"/>
                 </template>
                 <template v-else>
-                    <div class="relative w-full h-full">
-                        <video
-                                class="w-full h-full object-cover"
-                                autoplay
-                                muted
-                                loop
-                                playsinline
-                        >
-                            <source src="/videos/map.mp4" />
-                        </video>
-
-                        <div
-                                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-5"
-                        >
-                            <img
-                                    src="/images/logo_glow.png"
-                                    class="w-[350px] h-auto"
-                            />
-                            <div class="rounded-xl">
-                                <button
-                                        @click="showFactions"
-                                        class="transform uppercase transition-transform duration-200 hover:scale-110 bg-stone-900 font-semibold text-yellow-100 px-6 py-2 text-2xl border-1 border-yellow-100 shadow-white"
-                                >
-                                    Join Battle
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <WelcomeScreen @showFactions="showFactions"/>
                 </template>
             </Transition>
         </div>
@@ -63,6 +36,7 @@ import RegistrationModal from "../components/RegistrationModal.vue";
 import {onMounted, ref} from "vue";
 import {Modal} from "flowbite";
 import Settlements from "../components/Settlements.vue";
+import WelcomeScreen from "../components/WelcomeScreen.vue";
 let modalInstance = null; // To store the Flowbite Modal instance
 
 const welcomeText = 'A classical insired Epic fantasy reborn for a new age.\n' +
@@ -85,13 +59,13 @@ onMounted(() => {
         backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40',
         closable: true,
         onHide: () => {
-            console.log('modal is hidden');
+
         },
         onShow: () => {
-            console.log('modal is shown');
+
         },
         onToggle: () => {
-            console.log('modal has been toggled');
+
         }
     };
 

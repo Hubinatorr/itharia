@@ -1,6 +1,7 @@
 <script setup>
 import {ref} from "vue";
 import {addUser} from "../utils/api.js";
+import {userStore} from "../stores/userStore.js";
 
 const props = defineProps({
     faction: String,
@@ -11,7 +12,8 @@ const email = ref(null)
 
 function createUser() {
     addUser(email.value, props.faction.toLowerCase()).then((response) => {
-        console.log(response)
+        userStore.setEmail(email.value)
+        userStore.setFaction(props.faction)
     }).catch((err) => {
         console.log(err)
     })
@@ -52,7 +54,8 @@ function createUser() {
                 <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b border-gray-600">
                     <button :disabled="email === null"
                             @click="createUser"
-                            data-modal-hide="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">I accept</button>
+                            data-modal-hide="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">
+                        I accept</button>
                 </div>
             </div>
         </div>
