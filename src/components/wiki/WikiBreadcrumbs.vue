@@ -29,7 +29,6 @@ import { findPathById } from '../../utils/wikiUtils';
 const route = useRoute();
 const pageId = computed(() => route.params.pageId);
 
-// Vypočítaná vlastnosť, ktorá generuje cestu pre breadcrumbs
 const path = computed(() => {
     if (!pageId.value) return [];
     return findPathById(wikiTree, pageId.value);
