@@ -1,19 +1,21 @@
 <template>
     <div class="space-y-16">
         <div class="min-h-[calc(100vh-68px)]">
-            <template v-if="useUserStore().faction">
-                <UserFaction/>
-            </template>
-            <template v-else>
-                <Transition name="fade" mode="out-in">
-                    <template v-if="factionsShown">
-                        <Factions :show-modal="openModal"/>
-                    </template>
-                    <template v-else>
-                        <WelcomeScreen @showFactions="showFactions"/>
-                    </template>
-                </Transition>
-            </template>
+            <Transition name="fade" mode="out-in">
+                <template v-if="useUserStore().faction">
+                    <UserFaction/>
+                </template>
+                <template v-else>
+                    <Transition name="fade" mode="out-in">
+                        <template v-if="factionsShown">
+                            <Factions :show-modal="openModal"/>
+                        </template>
+                        <template v-else>
+                            <WelcomeScreen @showFactions="showFactions"/>
+                        </template>
+                    </Transition>
+                </template>
+            </Transition>
         </div>
         <div class="px-4 grid space-y-6 md:space-y-0 text-yellow-100 grid-cols-1 md:grid-cols-2 w-full justify-center items-stretch">
             <div class="flex">
