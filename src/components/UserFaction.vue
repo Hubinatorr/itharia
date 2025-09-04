@@ -6,7 +6,7 @@ const store = useUserStore();
 <template>
     <div class="relative w-full h-full overflow-hidden">
         <img :src="`/images/factions/${store.faction.toLowerCase()}.png`"
-             class="w-full h-full object-cover mask-fade-corners" />
+             class="w-full h-full object-cover mask-fade-corners"/>
         <div
                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-5"
         >
