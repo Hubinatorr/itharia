@@ -30,30 +30,6 @@
                             Home
                         </a>
                     </li>
-
-                    <li
-                            class="relative"
-                            @mouseover="isBooksDropdownOpen = true"
-                            @mouseleave="isBooksDropdownOpen = false"
-                    >
-                        <button class="flex text-xl items-center justify-between w-full py-2 px-3 text-stone-900 rounded hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto text-white md:hover:text-yellow-200 focus:text-white border-stone-700 hover:bg-stone-700 md:hover:bg-transparent">
-                            Books
-                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                 fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                      stroke-width="2" d="m1 1 4 4 4-4"/>
-                            </svg>
-                        </button>
-                        <div v-show="isBooksDropdownOpen"
-                             class="absolute z-10 font-normal  divide-y divide-stone-100 rounded-lg shadow w-52 bg-stone-900 divide-stone-600">
-                            <ul class="py-2 text-sm text-stone-400">
-                                <li><a href="/sample-chapters"
-                                       class="block px-4 py-2 hover:text-yellow-200 text-xl">Sample
-                                    Chapters</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
                     <li
                             class="relative"
                             @mouseover="isGamesDropdownOpen = true"
@@ -99,7 +75,7 @@
 import {ref} from 'vue';
 
 // Reactive state for each dropdown menu
-const isBooksDropdownOpen = ref(false);
+
 const isGamesDropdownOpen = ref(false);
 
 // Reactive state for the mobile hamburger menu
