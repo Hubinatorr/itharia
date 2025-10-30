@@ -1,6 +1,5 @@
 import { createWebHistory, createRouter } from "vue-router";
 import MainPage from "../views/MainPage.vue";
-import SampleChapters from "../views/SampleChapters.vue";
 import QuestsOfItharia from "../views/QuestsOfItharia.vue";
 import WarOfItharia from "../views/WarOfItharia.vue";
 import CardsOfItharia from "../views/CardsOfItharia.vue";
