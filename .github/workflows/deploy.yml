@@ -1,49 +1,49 @@
-name: Deploy Vue site to /www via FTP
+# Name for this workflow
+name: Build and Deploy Vue App
 
+# Run this workflow on a push to the 'main' branch
 on:
   push:
     branches:
       - main
-  workflow_dispatch:         # allows manual runs from Actions UI
 
+# The sequence of jobs to run
 jobs:
   build-and-deploy:
+    # Use a standard Linux virtual machine
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+
+      # 1. Get your code from GitHub
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      # 2. Set up Node.js (for npm)
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'   # fine for most Vue projects; change only if you need a different version
+          node-version: '18' # You can change this version
+          cache: 'npm'
 
-      - name: Cache node modules
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
+      # 3. Install all npm packages
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Build site (Vue)
+      # 4. Run the build script (this creates the 'dest/' folder)
+      - name: Build Vue.js app
         run: npm run build
 
-      - name: Upload to FTP (dist -> /www)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      # 5. Upload the 'dest' folder contents to the 'www' folder
+      - name: Deploy to hosting
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
+          # Your secrets (from Step 1)
           server: ${{ secrets.ITHARIA_FTP_SERVER }}
-          username: ${{ secrets.ITHARIA_FTP_USERNAME }}
+          username: ${{ ecrets.ITHARIA_FTP_USERNAME }}
           password: ${{ secrets.ITHARIA_FTP_PASSWORD }}
-          protocol: ftp
-          port: 21
-          local-dir: ./dist
-          server-dir: /www/
-          exclude: |
-            **/.git*
-            **/.github*
-            **/node_modules/**
+
+          # This is your build folder, as you specified
+          local-dir: ./dest/
+
+          # This is your target folder on the server
+          server-dir: www/
