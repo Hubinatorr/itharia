@@ -39,7 +39,7 @@ jobs:
         with:
           # Your secrets (from Step 1)
           server: ${{ secrets.ITHARIA_FTP_SERVER }}
-          username: ${{ ecrets.ITHARIA_FTP_USERNAME }}
+          username: ${{ secrets.ITHARIA_FTP_USERNAME }}
           password: ${{ secrets.ITHARIA_FTP_PASSWORD }}
 
           # This is your build folder, as you specified
