@@ -13,11 +13,6 @@ const routes = [
 		component: MainPage
 	},
 	{
-		path: "/sample-chapters",
-		name: "Sample Chapters",
-		component: SampleChapters
-	},
-	{
 		path: "/war-of-itharia",
 		name: "War of Itharia",
 		component: WarOfItharia
