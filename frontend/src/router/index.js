@@ -5,7 +5,7 @@ import WarOfItharia from "../views/WarOfItharia.vue";
 import CardsOfItharia from "../views/CardsOfItharia.vue";
 import Almanach from "../views/Almanach.vue";
 import WikiLayout from "../components/wiki/WikiLayout.vue";
-
+import Map from "../views/Map.vue";
 const routes = [
 	{
 		path: "/",
@@ -36,6 +36,11 @@ const routes = [
 		path: '/wiki/:pageId',
 		name: 'WikiPage',
 		component: WikiLayout
+	},
+	{
+		path: '/map',
+		name: 'Map',
+		component: Map
 	}
 ];
 

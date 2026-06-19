@@ -65,6 +65,12 @@
                             Almanach
                         </a>
                     </li>
+                    <li>
+                        <a href="/map"
+                           class="block text-xl py-2 px-3 text-stone-900 rounded hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white md:hover:text-yellow-200 hover:bg-stone-700 hover:text-white md:hover:bg-transparent">
+                            Map
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
