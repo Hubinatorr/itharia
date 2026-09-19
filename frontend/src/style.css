@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@import "flowbite/src/themes/default";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f0e0d;
+  color: #f3e5ab;
+  overflow: hidden;
+}

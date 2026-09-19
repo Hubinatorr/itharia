@@ -1,0 +1,30 @@
+{
+  "name": "itharia",
+  "version": "1.0.0",
+  "description": "Itharia frontend",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@fortawesome/vue-fontawesome": "^3.1.1",
+    "@tailwindcss/vite": "^4.0.8",
+    "axios": "^1.11.0",
+    "flowbite": "^3.1.2",
+    "maplibre-gl": "^4.7.1",
+    "lucide-vue-next": "^0.536.0",
+    "pinia": "^3.0.3",
+    "tailwindcss": "^4.0.8",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.1.0"
+  }
+}
